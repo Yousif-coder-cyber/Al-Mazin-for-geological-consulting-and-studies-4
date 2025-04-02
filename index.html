@@ -1,158 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save This Planet</title>
-
+    <title>Al-Mazin Bureau for Geological Consulting and Studies</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
+            text-align: center;
             margin: 20px;
-            padding: 20px;
-            background: linear-gradient(to right, #a0e1a7, #81b38e);
-            color: #2f4f2f;
         }
-
-        h1,
-        h2,
-        h3 {
-            color: #4b8c4f;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .about-container {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        .section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .section-button {
+            background-color: #333; /* Dark Grey */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .section-button:hover,
+        .section-button.toggled {
+            background-color: #777; /* Lighter Grey */
+            color: black; /* Black text on hover/toggle */
+        }
+        .section-button.toggled {
+            font-weight: bold;
+        }
+        .section-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: ltr;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .section-content.active {
+            display: block;
+        }
+        .arabic-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: rtl;
+            font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            unicode-bidi: embed;
+        }
+        .arabic-content.active {
+            display: block;
+        }
+        .section-content h2,
+        .arabic-content h2 {
+            color: firebrick;
+            font-weight: bold;
             text-align: center;
         }
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
+        .section-content p,
+        .arabic-content p {
+            color: #555;
+            font-weight: bold;
+            text-align: justify;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            text-align: left;
+            margin-left: 40px;
+        }
+        .doctor-section {
+            margin-top: 40px;
+            text-align: center;
         }
 
-        .plant-container {
+        .doctor-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-        }
-
-        .plant {
-            margin: 15px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.8);
-            border: 2px solid #4b8c4f;
-            text-align: center;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .plant img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.1);
-            text-align: center;
-            color: #4b8c4f;
-        }
-
-        .upload-container {
-            margin-top: 20px;
+            gap: 20px;
             padding: 20px;
-            background: white;
-            border: 1px solid #4b8c4f;
-            text-align: center;
-            border-radius: 10px;
         }
 
-        .upload-container input {
-            margin-top: 10px;
+        .doctor {
+            width: 180px;
+            margin: 0;
+            text-align: center;
         }
+        .doctor img {
+            width: 100px;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .doctor p {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #555;
+        }
+
     </style>
 </head>
-
 <body>
-    <h1>Save This Planet</h1>
+    <img src="https://i.postimg.cc/d1RQh0Sx/Screenshot-2025-03-31-143115.png" alt="Al-Mazin Bureau for Geological Consulting and Studies">
+    <h1>Al-Mazin Bureau for Geological Consulting and Studies</h1>
 
-  <b>  <p>Welcome here everyone, my name is Yousif Al-Salihi. I am an IB learner with a personal project aiming to save this city's climate, species, ecosystem, and the people suffering in unbarred summers. As you participate and cooperate with my project, you will assist your country and its people with honor and dignity and save them. After you have got an understanding of the ecosystems and the biodiversity of Iraq, you are ready to get in more depth and know the plants that are needed to accomplish this project.</p>
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleSection('about', this)">About Us</button>
+            <button class="section-button" onclick="toggleSection('services', this)">Our Services</button>
+            <button class="section-button" onclick="toggleSection('contact', this)">Contact Us</button>
+            <button class="section-button" onclick="toggleSection('achievements', this)">Our Achievements </button>
+        </div>
 
-    <h2>Overview of Iraq's Ecosystem</h2>
-    <p>Iraq’s environment is diverse, with arid deserts, fertile river valleys, and mountainous regions. The Tigris and Euphrates rivers create a historically significant agricultural zone known as the Fertile Crescent. However, climate change, deforestation, and poor land management have led to severe ecological challenges.</p>
+        <div id="about" class="section-content">
+            <h2>About Us</h2>
+            <p>
+                Al-Mazin Bureau for Geological Studies and Consulting was established in (1998) and includes
+                a distinguished group of consultants in various fields of geology, many of whom have worked for years in relevant government departments and institutions.
+                The Bureau’s future vision goes beyond the traditional role of consulting firms, aiming to develop ambitious strategic plans to position Iraq in the place it rightfully deserves.
+            </p>
+        </div>
 
-    <h2>Climate Change Effects</h2>
-    <p>Climate change is causing extreme temperatures, prolonged droughts, and desertification. The Tigris and Euphrates rivers are shrinking due to upstream damming, reducing water availability for agriculture and daily life. The loss of wetlands threatens biodiversity, while air and water pollution worsen public health.</p>
+        <div id="services" class="section-content">
+            <h1>Our Services</h1>
+           <img src="https://i.postimg.cc/JzCPRx4z/Screenshot-2025-04-01-234029.png" alt="Service">
+        </div>
 
-    <h2>Geographical Zones and Environmental Challenges</h2>
-    <ul>
-        <li><strong>Desert and Semi-Arid Zones:</strong> Cover large parts of Iraq, experiencing extreme heat, water shortages, and minimal vegetation.</li>
-        <li><strong>Fertile Crescent:</strong> Once a thriving agricultural hub, now facing soil degradation and water scarcity.</li>
-        <li><strong>Mountainous North:</strong> A biodiversity hotspot, but deforestation and human encroachment threaten native species.</li>
-        <li><strong>Marshlands:</strong> Home to rich biodiversity, but drying due to climate change and human activities.</li>
-    </ul>
-
-    <h2>How to Help</h2>
-    <ul>
-        <li>Plant more trees and drought-resistant vegetation to restore ecosystems.</li>
-        <li>Reduce water consumption and promote efficient irrigation methods.</li>
-        <li>Support wetland restoration and prevent illegal land reclamation.</li>
-        <li>Advocate for policies that promote sustainable land and water management.</li>
-        <li>Encourage recycling and reduce plastic waste to limit pollution.</li>
-    </ul>
-
-    <h2>Plants to Help Restore Balance</h2>
-    <div class="plant-container">
-        <div class="plant">
-            <img src="https://glamorwood.com/wp-content/uploads/2025/01/Mesquite-Tree.webp" alt="Mesquite Tree" />
-            <h3>Mesquite Tree</h3>
-            <p>Thrives in arid environments, prevents desertification, and improves soil fertility.</p>
+        <div id="contact" class="section-content">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 Al-Karadeh, Baghdad</li>
+            </ul>
         </div>
-        <div class="plant">
-            <img src="https://cf.ltkcdn.net/garden/images/orig/211153-2125x1411-Tamarix-tree.jpg" alt="Tamarisk Tree">
-            <h3>Tamarisk Tree</h3>
-            <p>Absorbs excess salt from the soil, combats desert spread, and provides windbreaks.</p>
-        </div>
-        <div class="plant">
-            <img src="https://cdn.britannica.com/52/198652-050-D69AF4B3/Date-palms-California.jpg" alt="Date Palm">
-            <h3>Date Palm</h3>
-            <p>Provides shade, stabilizes soil, and supports agriculture in dry regions.</p>
-        </div>
-        <div class="plant">
-            <img src="https://m.media-amazon.com/images/I/61L4KZysHxL._AC_US1000_.jpg" alt="Moringa Tree">
-            <h3>Moringa Tree</h3>
-            <p>Fast-growing, purifies water, restores soil, and provides nutrition.</p>
-        </div>
-        <div class="plant">
-            <img src="https://cdn11.bigcommerce.com/s-zkeit9anw6/images/stencil/original/uploaded_images/eucalyptus-tree-and-sky.jpg?t=1697660510" alt="Eucalyptus Tree">
-            <h3>Eucalyptus Tree</h3>
-            <p>Absorbs pollutants, improves air quality, and prevents soil erosion.</p>
-        </div>
-        <div class="plant">
-            <img src="https://png.pngtree.com/png-clipart/20241022/original/pngtree-beautiful-african-acacia-tree-featuring-distinctive-canopy-and-bark-png-image_16452579.png" alt="Acacia Tree">
-            <h3>Acacia Tree</h3>
-            <p>Drought-resistant tree that enriches soil with nitrogen and prevents land degradation.</p>
-        </div>
-        <div class="plant">
-            <img src="https://jurassicplants.co.uk/cdn/shop/products/DSC02018_2048x.jpg?v=1657570019" alt="Sophora Tree">
-            <h3>Sophora Tree</h3>
-            <p>Survives extreme heat, improves soil health, and helps reforest dry areas.</p>
+        <div id="achievements" class="section-content">
+            <h2>Our Achievments</h2>
+            <ul>
+                <li>Preparing an environmental impact assessment study for the borders of Basra Governorate.</li>
+                <li>Preparing an environmental impact assessment study for the establishment of Sinjar University.</li>
+                <li>Studying and calculating the amount of pollution in the Tigris River in the Al-Qaim area.</li>
+                <li>Studying and evaluating environmental and radiological pollution in the Abu Sukheir area, Najaf Al-Ashraf.</li>
+                <li>Drilling water wells for various purposes such as agricultural, irrigation, and reducing groundwater levels, in addition to drilling monitoring wells.</li>
+                <li>Studying surface and groundwater resources and the study of hydraulic factors, in addition to studying mineral water sources and the possibility of establishing health resorts.</li>
+                <li>Exploration and investigation of salt deposits and determining their reserves.</li>
+                <li>Various geophysical surveys for the purposes of exploration, identifying cavities, and determining buried objects.</li>
+                <li>Studying and determining phosphate reserves in the Al-Ukhaidhir area.</li>
+                <li>Geotechnical assessment of the Oshwa and Jandali sites for sanitary landfill purposes.</li>
+                <li>Geotechnical assessment of the site between the Khazka and Barkhiya valleys, west of the city of Ana, for the purpose of constructing an artificial lake for pumped-storage hydroelectricity generation.</li>
+                <li>Geotechnical assessment of the Shari Juan site in the Sulaymaniyah Governorate for the construction of the Grand Millennium Hotel (32 floors).</li>
+                <li>Geotechnical assessment of previous presidential sites such as Makhoul and Sarsang.</li>
+                <li>Preparing an engineering geological map of the area between Baiji and Sinjar.</li>
+                <li>Geotechnical investigation of marble and its alternatives throughout the country.</li>
+                <li>Updating hydrogeological maps at a scale of 1:250,000.</li>
+                <li>Preparing a map of groundwater depth in Iraq at a scale of 1:6,000,000.</li>
+                <li>Implementing grouting operations using micropiles under foundations to treat land subsidence and subsurface cavities.</li>
+            </ul>
         </div>
     </div>
 
-    <div class="upload-container">
-        <h2>Send Proof of Your Planting</h2>
-        <p>Upload a short video showing your planted tree. Your effort will be recognized!</p>
-        <form action="https://forms.gle/YOUR_GOOGLE_FORM_LINK" method="POST" enctype="multipart/form-data">
-            <input type="file" name="video" accept="video/*" required>
-            <br><br>
-            <button type="submit">Submit Video</button> </b>
-        </form>
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleArabicSection('arabic-about', this)">من نحن</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-services', this)">خدماتنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-contact', this)">اتصل بنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-achievements', this)">إنجازاتنا </button>
+        </div>
+
+        <div id="arabic-about" class="arabic-content">
+            <h2>من نحن</h2>
+            <p>
+                تأسس مكتب المازن للدراسات والاستشارات الجيولوجية سنة 1998، ويضم المكتب نخبة من الاستشاريين في مجالات واسعة في علم الجيولوجيا،
+                ممن عملوا سنوات طوال لدى الدوائر والمؤسسات ذات العلاقة. إن الرؤية المستقبلية للمكتب تتجاوز الدور التقليدي للمكاتب الاستشارية،
+                وصولًا إلى وضع خطط مستقبلية طموحة لوضع العراق في ما يستحقه من مقام.
+            </p>
+        </div>
+
+        <div id="arabic-services" class="arabic-content">
+            <h2>خدماتنا</h2>
+          <img src="https://i.postimg.cc/JzCPRx4z/Screenshot-2025-04-01-234029.png" alt="Service">
+        </div>
+        <div id="arabic-contact" class="arabic-content">
+            <h2>اتصل بنا</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 الكرادة، بغداد</li>
+            </ul>
+        </div>
+        <div id="arabic-achievements" class="arabic-content">
+            <h2>انجازاتنا</h2>
+            <ul dir="rtl">
+                <li>إعداد دراسة الأثر البيئي لحدود محافظة البصرة .</li>
+                <li>إعداد دراسة الأثر البيئي لإنشاء جامعة سنجار .</li>
+                <li>دراسة وحساب مقدار التلوث في نهر دجلة في منطقة القائم .</li>
+                <li>دراسة وتقييم التلوث البيئي والأشعاعي في منطقة ابو صخير النجف الأشرف .</li>
+                <li>حفر الآبار المائية لأغراض مختلفة مثل مشاريع زراعية , إروائية , تخفيض مناسيب المياه الجوفية إضافة الى حفر ابار مراقبة .</li>
+                <li>دراسة الموارد المائية السطحية والجوفية ودراسة العوامل الهيدروليكية إضافة الى دراسة مصادر المياه المعدنية وأمكانية إقامة منتجعات صحية .</li>
+                <li>الاستكشاف والتحري عن ترسبات الأملاح وتحديد احتياطياتها .</li>
+                <li>مسوحات جيوفيزيائية مختلفة لأغراض الاستكشاف وتحديد التكهفات وتحديد الأجسام المطمورة .</li>
+                <li>دراسة وتحديد احتياطي الفوسفات في منطقة النخيب .</li>
+                <li>التقييم الجيتكنيكي لموقعي عشوة وجندلي لأغراض الطمر الصحي .</li>
+                <li>التقييم الجيوتكنيكي لموقع ما بين واديي خزكة والبرخية غرب مدينة عانة لأغراض إنشاء بحيرة صناعية لإنتاج الكهرباء بالضخ .</li>
+                <li>التقييم الجيوتكنيكي لموقع شاري جوان في محافظة السليمانية لإنشاء فندق كراند ميلينيوم من ( ۳۲ ) طابق .</li>
+                <li>التقييم الجيوتكنيكي لمواقع رئاسية سابقة مثل مكحول وسرسنك .</li>
+                <li>إعداد خريطة جيولوجية هندسية للمنطقة ما بين بيجي وسنجار .</li>
+                <li>التحري الجيوتكنيكي للرخام وبدائله في عموم البلاد .</li>
+                <li>تحديث الخرائط الهيدروجيولوجية مقياس 1 : 250000</li>
+                <li>إعداد خريطة عمق المياه الجوفية في العراق مقياس 1 : 6000000</li>
+                <li>إجراء عمليات التحشية بواسطة المايكروبايلس تحت الأسس لمعالجة الهبوط الأرضي والتكهفات التحت سطحية .</li>
+            </ul>
+        </div>
+    </div>
+<div class="doctor-section">
+        <h2>Our Experts</h2>
+        <div class="doctor-container">
+            <div class="doctor">
+                <img src="https://i.postimg.cc/vBybwsHL/Screenshot-2025-03-31-143150.png" alt="Dr. Mazin Al-Aboudi" >
+                <p>Dr. Mazin Al-Aboudi<br>PhD in Geophysical Exploration<br>Director of the Bureau</p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/SRTh9YLD/Screenshot-2025-03-31-143204.png" alt="Dr. Rafiq Zaner">
+                <p>Dr. Rafaa Zair Jassim<br>PhD in Geochemistry and Environmental Sciences<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/TY1G6QGS/Screenshot-2025-03-31-143217.png" alt="Dr. Jasim Mohammed Thabet">
+                <p>Dr. Jassim Mohammed Thabet<br>PhD in Electrical Surveying<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/pVGbq88B/Screenshot-2025-03-31-143234.png" alt="Dr. Nasir Al-Musawi">
+                <p>Dr. Naseer Albasrawi<br>PhD in Water Resources and Environmental Studies<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/YSwJhxKt/Screenshot-2025-03-31-143430.png" alt="Araseen Kalikisian">
+                <p>Arsen Capigian<br>Geotechnical Site Evaluation Expert<br></p>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">
-        <p>Contact/Help: yousifmazin179@gmail.com</p>
-       <link rel="stylesheet" href="css/style.css">
-  </div>
-    </body>
-    </html>
+    <script>
+        function toggleSection(sectionId, button) {
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.about-container:first-child .section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        function toggleArabicSection(sectionId, button) {
+            const sections = document.querySelectorAll('.arabic-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.about-container:nth-child(2) .section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const englishButtons = document.querySelectorAll('.about-container:first-child .section-button');
+            if (englishButtons.length > 0) {
+                toggleSection('about', englishButtons[0]); // Show English About Us by default and toggle the button
+            }
+
+            const arabicButtons = document.querySelectorAll('.about-container:nth-child(2) .section-button');
+            if (arabicButtons.length > 0) {
+                toggleArabicSection('arabic-about', arabicButtons[0]); // Show Arabic من نحن by default and toggle the button
+            }
+        });
+    </script>
+</body>
+</html>
