@@ -54,6 +54,25 @@
             font-size: 16px;
             line-height: 1.6;
         }
+      body {
+  background-image: url('https://i.postimg.cc/xdH7DVpx/Screenshot-2025-04-02-184408.png'); /* Replace with your image path */
+  background-size: contain; /* Ensures the entire image is visible */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center; /* Centers the image on the page */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
+  background-blend-mode: multiply; /* Blends the overlay with the image */
+}
+
+/* If you want the background to cover the entire viewport even if the image is smaller */
+html, body {
+  height: 200%; /* Make sure they take up the full height */
+  margin: 0; /* Remove default margins */
+}
+
+body {
+  background-size: contain; /* Keep this for fitting the image */
+  /* ... other background properties ... */
+}
         .section-content.active {
             display: block;
         }
@@ -70,16 +89,21 @@
         .arabic-content.active {
             display: block;
         }
-        .section-content h2,
-        .arabic-content h2 {
+        .section-content h2,h1,.doctor-section h2
+        .arabic-content h2,h1 {
             color: firebrick;
             font-weight: bold;
             text-align: center;
         }
+      .doctor-section h2 {
+    color: firebrick;
+    font-weight: bold;
+    text-align: center;
+}
 
-        .section-content p,
-        .arabic-content p {
-            color: #555;
+        .section-content p,ul,
+        .arabic-content p,ul {
+            color: #282828B;
             font-weight: bold;
             text-align: justify;
         }
@@ -161,7 +185,7 @@
             </ul>
         </div>
         <div id="achievements" class="section-content">
-            <h2>Our Achievments</h2>
+            <h2> our Achievements</h2>
             <ul>
                 <li>Preparing an environmental impact assessment study for the borders of Basra Governorate.</li>
                 <li>Preparing an environmental impact assessment study for the establishment of Sinjar University.</li>
@@ -190,7 +214,7 @@
             <button class="section-button" onclick="toggleArabicSection('arabic-about', this)">من نحن</button>
             <button class="section-button" onclick="toggleArabicSection('arabic-services', this)">خدماتنا</button>
             <button class="section-button" onclick="toggleArabicSection('arabic-contact', this)">اتصل بنا</button>
-            <button class="section-button" onclick="toggleArabicSection('arabic-achievements', this)">إنجازاتنا </button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-achievements', this)">إنجازاتنا</button>
         </div>
 
         <div id="arabic-about" class="arabic-content">
@@ -215,7 +239,7 @@
             </ul>
         </div>
         <div id="arabic-achievements" class="arabic-content">
-            <h2>انجازاتنا</h2>
+            <h2>إنجازاتنا / Our Achievements</h2>
             <ul dir="rtl">
                 <li>إعداد دراسة الأثر البيئي لحدود محافظة البصرة .</li>
                 <li>إعداد دراسة الأثر البيئي لإنشاء جامعة سنجار .</li>
@@ -305,3 +329,5 @@
     </script>
 </body>
 </html>
+
+
