@@ -124,7 +124,26 @@ body {
             color: #555;
         }
 body {
-  background-image: url('https://i.postimg.cc/xdH7DVpx/Screenshot-2025-04-02-184408.png'); /* Replace with your image path */
+  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
+  background-size: contain; /* Ensures the entire image is visible */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center; /* Centers the image on the page */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
+  background-blend-mode: multiply; /* Blends the overlay with the image */
+}
+
+/* If you want the background to cover the entire viewport even if the image is smaller */
+html, body {
+  height: 200%; /* Make sure they take up the full height */
+  margin: 0; /* Remove default margins */
+}
+
+body {
+  background-size: contain; /* Keep this for fitting the image */
+  /* ... other background properties ... */
+}
+body {
+  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
   background-size: contain; /* Ensures the entire image is visible */
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: center; /* Centers the image on the page */
