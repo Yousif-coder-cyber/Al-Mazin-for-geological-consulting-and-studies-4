@@ -1,221 +1,310 @@
-body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-        .about-container {
-            border: 1px solid #ccc;
-            margin-top: 20px;
-            text-align: center;
-            padding: 10px;
-        }
-        .section-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .section-button {
-            background-color: #333; /* Dark Grey */
-            color: white; /* White text */
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .section-button:hover,
-        .section-button.toggled {
-            background-color: #777; /* Lighter Grey */
-            color: black; /* Black text on hover/toggle */
-        }
-        .section-button.toggled {
-            font-weight: bold;
-        }
-        .section-content {
-            display: none;
-            padding: 15px;
-            text-align: justify;
-            direction: ltr;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .section-content.active {
-            display: block;
-        }
-        .arabic-content {
-            display: none;
-            padding: 15px;
-            text-align: justify;
-            direction: rtl;
-            font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
-            font-size: 18px;
-            line-height: 1.8;
-            unicode-bidi: embed;
-        }
-        .arabic-content.active {
-            display: block;
-        }
-        .section-content h2,h1,.doctor-section h2
-        .arabic-content h2,h1 {
-            color: firebrick;
-            font-weight: bold;
-            text-align: center;
-        }
-.doctor-section h2 {
-    color: firebrick;
-    font-weight: bold;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Al-Mazin Bureau for Geological Consulting and Studies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px 0;
+      background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      background-blend-mode: multiply;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      color: #282828;
+    }
 
-        .section-content p,ul,
-        .arabic-content p,ul {
-            color: #282828B;
-            font-weight: bold;
-            text-align: justify;
-        }
-        h1 {
-            margin-top: 20px;
-            text-align: center;
-        }
-        ul {
-            list-style-type: square;
-            text-align: left;
-            margin-left: 40px;
-        }
-        .doctor-section {
-            margin-top: 40px;
-            text-align: center;
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
 
-        .doctor-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
+    h1, h2 {
+      color: firebrick;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0 10px;
+    }
 
-        .doctor {
-            width: 180px;
-            margin: 0;
-            text-align: center;
-        }
-        .doctor img {
-            width: 100px;
-            height: 140px;
-            border-radius: 10px;
-            object-fit: cover;.doctor img {
-    object-fit: cover;
-}
-            margin-bottom: 5px;
-        }
-        .doctor p {
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 0;
-            color: #555;
-        }
-body {
-  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
-  background-size: contain; /* Ensures the entire image is visible */
-  background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: center; /* Centers the image on the page */
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
-  background-blend-mode: multiply; /* Blends the overlay with the image */
-}
+    .about-container {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(255,255,255,0.9);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/* If you want the background to cover the entire viewport even if the image is smaller */
-html, body {
-  height: 200%; /* Make sure they take up the full height */
-  margin: 0; /* Remove default margins */
-}
+    .section-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
 
-body {
-  background-size: contain; /* Keep this for fitting the image */
-  /* ... other background properties ... */
-}
-body {
-  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
-  background-size: contain; /* Ensures the entire image is visible */
-  background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: center; /* Centers the image on the page */
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
-  background-blend-mode: multiply; /* Blends the overlay with the image */
-}
+    .section-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-/* If you want the background to cover the entire viewport even if the image is smaller */
-html, body {
-  height: 200%; /* Make sure they take up the full height */
-  margin: 0; /* Remove default margins */
-}
-.product-box {
-    border: 2px solid #ccc;
-    background-color: white;
-    margin: 20px auto;
-    padding: 15px;
-    max-width: 900px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
+    .section-button:hover,
+    .section-button.toggled {
+      background-color: #777;
+      color: black;
+      font-weight: bold;
+    }
 
-.product-box h2 {
-    margin-bottom: 15px;
-    color: firebrick;
-}
+    .section-content,
+    .arabic-content {
+      display: none;
+      padding: 15px;
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 0 auto 20px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 6px;
+    }
 
-.product-box div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+    .section-content.active,
+    .arabic-content.active {
+      display: block;
+    }
 
-.product-box img {
-    width: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-.product-box {
-  border: 2px solid #ccc;
-  background: white;
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 900px;
-  box-sizing: border-box;
-}
+    .arabic-content {
+      direction: rtl;
+      font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      unicode-bidi: embed;
+    }
 
-.product-box h2 {
-  color: firebrick;
-  font-size: 1.2em;
-  margin-bottom: 15px;
-}
+    ul {
+      list-style-type: square;
+      text-align: left;
+      margin-left: 40px;
+      color: #282828;
+      font-weight: bold;
+    }
 
-.product-box .image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+    .doctor-section {
+      margin-top: 40px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.product-box .image-grid img {
-  width: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-}
+    .doctor-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
 
+    .doctor {
+      width: 180px;
+      text-align: center;
+    }
 
-body {
-  background-size: contain; /* Keep this for fitting the image */
-  /* ... other background properties ... */
-}
+    .doctor img {
+      width: 100px;
+      height: 140px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+
+    .doctor p {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 0;
+      color: #555;
+    }
+
+    /* Products box */
+    .product-box {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .product-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .image-grid img {
+      width: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+  </style>
+</head>
+<body>
+  <img src="https://i.postimg.cc/zvhmTT7x/Screenshot-2025-04-02-211212.png" alt="Al-Mazin Bureau for Geological Consulting and Studies" />
+  <h1>Al-Mazin Bureau for Geological Consulting and Studies</h1>
+
+  <div class="about-container">
+    <div class="section-buttons">
+      <button class="section-button" onclick="toggleSection('about', this)">About Us</button>
+      <button class="section-button" onclick="toggleSection('services', this)">Our Services</button>
+      <button class="section-button" onclick="toggleSection('contact', this)">Contact Us</button>
+      <button class="section-button" onclick="toggleSection('achievements', this)">Our Achievements</button>
+    </div>
+
+    <div id="about" class="section-content">
+      <h2>About Us</h2>
+      <p>
+        Al-Mazin Bureau for Geological Studies and Consulting was established in (1998) and includes a distinguished group of consultants in various fields of geology,
+        many of whom have worked for years in relevant government departments and institutions. The Bureau’s future vision goes beyond the traditional role of consulting firms,
+        aiming to develop ambitious strategic plans to position Iraq in the place it rightfully deserves.
+      </p>
+    </div>
+
+    <div id="services" class="section-content">
+      <h2>Our Services</h2>
+      <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service" />
+    </div>
+
+    <div id="contact" class="section-content">
+      <h2>Contact Us</h2>
+      <ul>
+        <li>+964 773 670 0004 / +964 787 198 5019</li>
+        <li>mazingroup64@gmail.com</li>
+        <li>Al-Karadeh, Baghdad</li>
+      </ul>
+    </div>
+
+    <div id="achievements" class="section-content">
+      <h2>Our Achievements</h2>
+      <ul>
+        <li>Preparing an environmental impact assessment study for the borders of Basra Governorate.</li>
+        <li>Preparing an environmental impact assessment study for the establishment of Sinjar University.</li>
+        <li>Studying and calculating the amount of pollution in the Tigris River in the Al-Qaim area.</li>
+        <li>Studying and evaluating environmental and radiological pollution in the Abu Sukheir area, Najaf Al-Ashraf.</li>
+        <li>Drilling water wells for various purposes such as agricultural, irrigation, and reducing groundwater levels, in addition to drilling monitoring wells.</li>
+        <li>Studying surface and groundwater resources and the study of hydraulic factors, in addition to studying mineral water sources and the possibility of establishing health resorts.</li>
+        <li>Exploration and investigation of salt deposits and determining their reserves.</li>
+        <li>Various geophysical surveys for the purposes of exploration, identifying cavities, and determining buried objects.</li>
+        <li>Studying and determining phosphate reserves in the Al-Ukhaidhir area.</li>
+        <li>Geotechnical assessment of the Oshwa and Jandali sites for sanitary landfill purposes.</li>
+        <li>Geotechnical assessment of the site between the Khazka and Barkhiya valleys, west of the city of Ana, for the purpose of constructing an artificial lake for pumped-storage hydroelectricity generation.</li>
+        <li>Geotechnical assessment of the Shari Juan site in the Sulaymaniyah Governorate for the construction of the Grand Millennium Hotel (32 floors).</li>
+        <li>Geotechnical assessment of previous presidential sites such as Makhoul and Sarsang.</li>
+        <li>Preparing an engineering geological map of the area between Baiji and Sinjar.</li>
+        <li>Geotechnical investigation of marble and its alternatives throughout the country.</li>
+        <li>Updating hydrogeological maps at a scale of 1:250,000.</li>
+        <li>Preparing a map of groundwater depth in Iraq at a scale of 1:6,000,000.</li>
+        <li>Implementing grouting operations using micropiles under foundations to treat land subsidence and subsurface cavities.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <h2>Our Products</h2>
+    <div class="image-grid">
+      <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="Product 1" />
+      <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="Product 2" />
+      <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="Product 3" />
+      <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="Product 4" />
+      <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="Product 5" />
+      <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="Product 6" />
+      <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="Product 7" />
+      <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="Product 8" />
+      <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="Product 9" />
+      <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-21-37-26-7300fe03.jpg" alt="Product 10" />
+      <img src="https://i.postimg.cc/jjqCctgK/Whats-App-Image-2025-08-08-at-21-37-27-5c58f693.jpg" alt="Product 11" />
+      <img src="https://i.postimg.cc/XYkp9pgQ/Whats-App-Image-2025-08-08-at-21-37-27-70628fc1.jpg" alt="Product 12" />
+      <img src="https://i.postimg.cc/4xgYKzpY/Whats-App-Image-2025-08-08-at-21-37-27-b13a1be0.jpg" alt="Product 13" />
+      <img src="https://i.postimg.cc/3xvkNty5/Whats-App-Image-2025-08-08-at-21-37-28-d6fe909d.jpg" alt="Product 14" />
+    </div>
+  </div>
+
+  <div class="product-box" dir="rtl">
+    <h2>منتجاتنا</h2>
+    <div class="image-grid">
+      <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="منتج 1" />
+      <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="منتج 2" />
+      <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="منتج 3" />
+      <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="منتج 4" />
+      <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="منتج 5" />
+      <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="منتج 6" />
+      <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="منتج 7" />
+      <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="منتج 8" />
+      <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="منتج 9" />
+      <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-21-37-26-7300fe03.jpg" alt="منتج 10" />
+      <img src="https://i.postimg.cc/jjqCctgK/Whats-App-Image-2025-08-08-at-21-37-27-5c58f693.jpg" alt="منتج 11" />
+      <img src="https://i.postimg.cc/XYkp9pgQ/Whats-App-Image-2025-08-08-at-21-37-27-70628fc1.jpg" alt="منتج 12" />
+      <img src="https://i.postimg.cc/4xgYKzpY/Whats-App-Image-2025-08-08-at-21-37-27-b13a1be0.jpg" alt="منتج 13" />
+      <img src="https://i.postimg.cc/3xvkNty5/Whats-App-Image-2025-08-08-at-21-37-28-d6fe909d.jpg" alt="منتج 14" />
+    </div>
+  </div>
+
+  <div class="about-container">
+    <div class="section-buttons">
+      <button class="section-button" onclick="toggleArabicSection('arabic-about', this)">من نحن</button>
+      <button class="section-button" onclick="toggleArabicSection('arabic-services', this)">خدماتنا</button>
+      <button class="section-button" onclick="toggleArabicSection('arabic-contact', this)">اتصل بنا</button>
+      <button class="section-button" onclick="toggleArabicSection('arabic-achievements', this)">إنجازاتنا</button>
+    </div>
+
+    <div id="arabic-about" class="arabic-content">
+      <h2>من نحن</h2>
+      <p>
+        تأسس مكتب المازن للدراسات والاستشارات الجيولوجية سنة 1998، ويضم المكتب نخبة من الاستشاريين في مجالات واسعة في علم الجيولوجيا،
+        ممن عملوا سنوات طوال لدى الدوائر والمؤسسات ذات العلاقة. إن الرؤية المستقبلية للمكتب تتجاوز الدور التقليدي للمكاتب الاستشارية،
+        وصولًا إلى وضع خطط مستقبلية طموحة لوضع العراق في ما يستحقه من مقام.
+      </p>
+    </div>
+
+    <div id="arabic-services" class="arabic-content">
+      <h2>خدماتنا</h2>
+      <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service" />
+    </div>
+
+    <div id="arabic-contact" class="arabic-content">
+      <h2>اتصل بنا</h2>
+      <ul>
+        <li>+964 773 670 0004 / +964 787 198 5019</li>
+        <li>mazingroup64@gmail.com</li>
+        <li>الكرادة، بغداد</li>
+      </ul>
+    </div>
+
+    <div id="arabic-achievements" class="arabic-content">
+      <h2>إنجازاتنا</h2>
+      <ul dir="rtl">
+        <li>إعداد دراسة الأثر البيئي لحدود محافظة البصرة .</li>
+        <li>إعداد دراسة الأثر البيئي لإنشاء جامعة سنجار .</li>
+        <li>دراسة وحساب مقدار التلوث في نهر دجلة في منطقة القائم .</li>
+        <li>دراسة وتقييم التلوث البيئي والأشعاعي في منطقة ابو صخير النجف الأشرف .</li>
+        <
