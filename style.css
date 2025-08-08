@@ -156,6 +156,37 @@ html, body {
   height: 200%; /* Make sure they take up the full height */
   margin: 0; /* Remove default margins */
 }
+.product-box {
+    border: 2px solid #ccc;
+    background-color: white;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 900px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.product-box h2 {
+    margin-bottom: 15px;
+    color: firebrick;
+}
+
+.product-box div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-box img {
+    width: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 
 body {
   background-size: contain; /* Keep this for fitting the image */
