@@ -186,6 +186,33 @@ html, body {
     border-radius: 8px;
     object-fit: cover;
 }
+.product-box {
+  border: 2px solid #ccc;
+  background: white;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.product-box h2 {
+  color: firebrick;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.product-box .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-box .image-grid img {
+  width: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
 
 
 body {
