@@ -36,4 +36,17 @@
                  toggleArabicSection('arabic-about', arabicButtons[0]); // Show Arabic من نحن by default and toggle the button
              }
          });
+function toggleSection(sectionId, button) {
+  const sections = document.querySelectorAll('.section-content');
+  sections.forEach(s => s.classList.remove('active'));
+  const buttons = document.querySelectorAll('.about-container:first-child .section-button');
+  buttons.forEach(btn => btn.classList.remove('toggled'));
+
+  const selected = document.getElementById(sectionId);
+  if (selected) {
+    selected.classList.add('active');
+    button.classList.add('toggled');
+  }
+}
+
      </script>
