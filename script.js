@@ -15,3 +15,12 @@ document.querySelectorAll('.click-expand').forEach(img => {
     img.classList.toggle('expanded');
   });
 });
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.click-expand').forEach(img => {
+    img.addEventListener('click', function() {
+      img.classList.toggle('expanded');
+    });
+  });
+});
+</script>
