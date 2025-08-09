@@ -10,3 +10,8 @@ document.querySelectorAll('img').forEach(img => {
     img.classList.toggle('enlarged');
   });
 });
+document.querySelectorAll('.click-expand').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('expanded');
+  });
+});
