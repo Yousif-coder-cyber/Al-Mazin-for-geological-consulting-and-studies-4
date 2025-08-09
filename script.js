@@ -5,17 +5,19 @@ function toggleSection(sectionId, button) {
   if (section) section.classList.add('active');
   button.classList.add('toggled');
 }
+
 document.querySelectorAll('img').forEach(img => {
   img.addEventListener('click', () => {
     img.classList.toggle('enlarged');
   });
 });
+
 document.querySelectorAll('.click-expand').forEach(img => {
   img.addEventListener('click', () => {
     img.classList.toggle('expanded');
   });
 });
-<script>
+
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.click-expand').forEach(img => {
     img.addEventListener('click', function() {
@@ -23,4 +25,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-</script>
