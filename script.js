@@ -5,3 +5,8 @@ function toggleSection(sectionId, button) {
   if (section) section.classList.add('active');
   button.classList.add('toggled');
 }
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('enlarged');
+  });
+});
