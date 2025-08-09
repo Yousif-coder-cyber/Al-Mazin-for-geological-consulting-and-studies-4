@@ -1,264 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Al Mazin for Geological Consulting and Studies</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 20px;
-        background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: rgba(0, 0, 0, 0.3);
-        background-blend-mode: multiply;
-        height: 200%;
-        margin: 0;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-    }
-    .about-container {
-        border: 1px solid #ccc;
-        margin-top: 20px;
-        text-align: center;
-        padding: 10px;
-    }
-    .section-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
-    }
-    .section-button {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-    }
-    .section-button:hover,
-    .section-button.toggled {
-        background-color: #777;
-        color: black;
-        font-weight: bold;
-    }
-    .section-content, .arabic-content {
-        display: none;
-        padding: 15px;
-        text-align: justify;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
-    }
-    .section-content.active, .arabic-content.active {
-        display: block;
-    }
-    .arabic-content {
-        direction: rtl;
-        font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
-        font-size: 18px;
-        line-height: 1.8;
-        unicode-bidi: embed;
-    }
-    h1, h2 {
-        color: firebrick;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 20px;
-    }
-    ul {
-        list-style-type: square;
-        text-align: left;
-        margin-left: 40px;
-        color: #282828B;
-        font-weight: bold;
-    }
-    .doctor-section {
-        margin-top: 40px;
-        text-align: center;
-    }
-    .doctor-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-    }
-    .doctor {
-        width: 180px;
-        margin: 0;
-        text-align: center;
-    }
-    .doctor img {
-        width: 100px;
-        height: 140px;
-        border-radius: 10px;
-        object-fit: cover;
-        margin-bottom: 5px;
-    }
-    .doctor p {
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 0;
-        color: #555;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Mazin for Geological Consulting and Studies</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<img src="https://i.postimg.cc/zvhmTT7x/Screenshot-2025-04-02-211212.png" alt="Al-Mazin Bureau for Geological Consulting and Studies" />
-<h1>Al-Mazin Bureau for Geological Consulting and Studies</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Mazin Bureau for Geological Consulting and Studies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .about-container {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        .section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .section-button {
+            background-color: #333; /* Dark Grey */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .section-button:hover,
+        .section-button.toggled {
+            background-color: #777; /* Lighter Grey */
+            color: black; /* Black text on hover/toggle */
+        }
+        .section-button.toggled {
+            font-weight: bold;
+        }
+        .section-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: ltr;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+      body {
+  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
+  background-size: contain; /* Ensures the entire image is visible */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center; /* Centers the image on the page */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
+  background-blend-mode: multiply; /* Blends the overlay with the image */
+}
+  body {
+  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg'); /* Replace with your image path */
+  background-size: contain; /* Ensures the entire image is visible */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center; /* Centers the image on the page */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay for shadow */
+  background-blend-mode: multiply; /* Blends the overlay with the image */
+}
 
-<div class="about-container">
-    <div class="section-buttons">
-        <button class="section-button" onclick="toggleSection('about', this)">About Us</button>
-        <button class="section-button" onclick="toggleSection('services', this)">Our Services</button>
-        <button class="section-button" onclick="toggleSection('contact', this)">Contact Us</button>
-        <button class="section-button" onclick="toggleSection('achievements', this)">Our Achievements</button>
-        <button class="section-button" onclick="toggleSection('our-products', this)">Our Products</button>
+/* If you want the background to cover the entire viewport even if the image is smaller */
+html, body {
+  height: 200%; /* Make sure they take up the full height */
+  margin: 0; /* Remove default margins */
+}
+
+body {
+  background-size: contain; /* Keep this for fitting the image */
+  /* ... other background properties ... */
+}    
+
+/* If you want the background to cover the entire viewport even if the image is smaller */
+html, body {
+  height: 200%; /* Make sure they take up the full height */
+  margin: 0; /* Remove default margins */
+}
+
+body {
+  background-size: contain; /* Keep this for fitting the image */
+  /* ... other background properties ... */
+}
+        .section-content.active {
+            display: block;
+        }
+        .arabic-content {
+            display: none;
+            padding: 15px;
+            text-align: justify;
+            direction: rtl;
+            font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            unicode-bidi: embed;
+        }
+        .arabic-content.active {
+            display: block;
+        }
+        .section-content h2,h1,.doctor-section h2
+        .arabic-content h2,h1 {
+            color: firebrick;
+            font-weight: bold;
+            text-align: center;
+        }
+      .doctor-section h2 {
+    color: firebrick;
+    font-weight: bold;
+    text-align: center;
+}
+
+        .section-content p,ul,
+        .arabic-content p,ul {
+            color: #282828B;
+            font-weight: bold;
+            text-align: justify;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            text-align: left;
+            margin-left: 40px;
+        }
+        .doctor-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .doctor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .doctor {
+            width: 180px;
+            margin: 0;
+            text-align: center;
+        }
+        .doctor img {
+            width: 100px;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+        .doctor p {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <img src='https://i.postimg.cc/zvhmTT7x/Screenshot-2025-04-02-211212.png' alt="Al-Mazin Bureau for Geological Consulting and Studies">
+    <h1>Al-Mazin Bureau for Geological Consulting and Studies</h1>
+
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleSection('about', this)">About Us</button>
+            <button class="section-button" onclick="toggleSection('services', this)">Our Services</button>
+            <button class="section-button" onclick="toggleSection('contact', this)">Contact Us</button>
+            <button class="section-button" onclick="toggleSection('achievements', this)">Our Achievements </button>
+            <button class="section-button" onclick="toggleSection('our-products', this)">Our Products</button>
+
+        </div>
+
+        <div id="about" class="section-content">
+            <h2>About Us</h2>
+            <p>
+                Al-Mazin Bureau for Geological Studies and Consulting was established in (1998) and includes
+                a distinguished group of consultants in various fields of geology, many of whom have worked for years in relevant government departments and institutions.
+                The Bureau’s future vision goes beyond the traditional role of consulting firms, aiming to develop ambitious strategic plans to position Iraq in the place it rightfully deserves.
+            </p>
+        </div>
+
+        <div id="services" class="section-content">
+            <h1>Our Services</h1>
+           <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service">
+        </div>
+
+        <div id="contact" class="section-content">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 Al-Karadeh, Baghdad</li>
+            </ul>
+        </div>
+        <div id="achievements" class="section-content">
+            <h2> our Achievements</h2>
+            <ul>
+                <li>Preparing an environmental impact assessment study for the borders of Basra Governorate.</li>
+                <li>Preparing an environmental impact assessment study for the establishment of Sinjar University.</li>
+                <li>Studying and calculating the amount of pollution in the Tigris River in the Al-Qaim area.</li>
+                <li>Studying and evaluating environmental and radiological pollution in the Abu Sukheir area, Najaf Al-Ashraf.</li>
+                <li>Drilling water wells for various purposes such as agricultural, irrigation, and reducing groundwater levels, in addition to drilling monitoring wells.</li>
+                <li>Studying surface and groundwater resources and the study of hydraulic factors, in addition to studying mineral water sources and the possibility of establishing health resorts.</li>
+                <li>Exploration and investigation of salt deposits and determining their reserves.</li>
+                <li>Various geophysical surveys for the purposes of exploration, identifying cavities, and determining buried objects.</li>
+                <li>Studying and determining phosphate reserves in the Al-Ukhaidhir area.</li>
+                <li>Geotechnical assessment of the Oshwa and Jandali sites for sanitary landfill purposes.</li>
+                <li>Geotechnical assessment of the site between the Khazka and Barkhiya valleys, west of the city of Ana, for the purpose of constructing an artificial lake for pumped-storage hydroelectricity generation.</li>
+                <li>Geotechnical assessment of the Shari Juan site in the Sulaymaniyah Governorate for the construction of the Grand Millennium Hotel (32 floors).</li>
+                <li>Geotechnical assessment of previous presidential sites such as Makhoul and Sarsang.</li>
+                <li>Preparing an engineering geological map of the area between Baiji and Sinjar.</li>
+                <li>Geotechnical investigation of marble and its alternatives throughout the country.</li>
+                <li>Updating hydrogeological maps at a scale of 1:250,000.</li>
+                <li>Preparing a map of groundwater depth in Iraq at a scale of 1:6,000,000.</li>
+                <li>Implementing grouting operations using micropiles under foundations to treat land subsidence and subsurface cavities.</li>
+            </ul>
+        </div>
     </div>
 
-    <div id="about" class="section-content">
-        <h2>About Us</h2>
-        <p>
-            Al-Mazin Bureau for Geological Studies and Consulting was established in (1998) and includes
-            a distinguished group of consultants in various fields of geology, many of whom have worked for years in relevant government departments and institutions.
-            The Bureau’s future vision goes beyond the traditional role of consulting firms, aiming to develop ambitious strategic plans to position Iraq in the place it rightfully deserves.
-        </p>
-    </div>
+    <div class="about-container">
+        <div class="section-buttons">
+            <button class="section-button" onclick="toggleArabicSection('arabic-about', this)">من نحن</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-services', this)">خدماتنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-contact', this)">اتصل بنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-achievements', this)">إنجازاتنا</button>
+            <button class="section-button" onclick="toggleArabicSection('arabic-products', this)">منتجاتنا</button>
+        </div>
 
-    <div id="services" class="section-content">
-        <h1>Our Services</h1>
-        <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service" />
-    </div>
+        <div id="arabic-about" class="arabic-content">
+            <h2>من نحن</h2>
+            <p>
+                تأسس مكتب المازن للدراسات والاستشارات الجيولوجية سنة 1998، ويضم المكتب نخبة من الاستشاريين في مجالات واسعة في علم الجيولوجيا،
+                ممن عملوا سنوات طوال لدى الدوائر والمؤسسات ذات العلاقة. إن الرؤية المستقبلية للمكتب تتجاوز الدور التقليدي للمكاتب الاستشارية،
+                وصولًا إلى وضع خطط مستقبلية طموحة لوضع العراق في ما يستحقه من مقام.
+            </p>
+        </div>
 
-    <div id="contact" class="section-content">
-        <h2>Contact Us</h2>
-        <ul>
-            <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
-            <li>📧 mazingroup64@gmail.com</li>
-            <li>📍 Al-Karadeh, Baghdad</li>
-        </ul>
+        <div id="arabic-services" class="arabic-content">
+            <h2>خدماتنا</h2>
+          <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service">
+        </div>
+        <div id="arabic-contact" class="arabic-content">
+            <h2>اتصل بنا</h2>
+            <ul>
+                <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
+                <li>📧 mazingroup64@gmail.com</li>
+                <li>📍 الكرادة، بغداد</li>
+            </ul>
+        </div>
+        <div id="arabic-achievements" class="arabic-content">
+            <h2>إنجازاتنا / Our Achievements</h2>
+            <ul dir="rtl">
+                <li>إعداد دراسة الأثر البيئي لحدود محافظة البصرة .</li>
+                <li>إعداد دراسة الأثر البيئي لإنشاء جامعة سنجار .</li>
+                <li>دراسة وحساب مقدار التلوث في نهر دجلة في منطقة القائم .</li>
+                <li>دراسة وتقييم التلوث البيئي والأشعاعي في منطقة ابو صخير النجف الأشرف .</li>
+                <li>حفر الآبار المائية لأغراض مختلفة مثل مشاريع زراعية , إروائية , تخفيض مناسيب المياه الجوفية إضافة الى حفر ابار مراقبة .</li>
+                <li>دراسة الموارد المائية السطحية والجوفية ودراسة العوامل الهيدروليكية إضافة الى دراسة مصادر المياه المعدنية وأمكانية إقامة منتجعات صحية .</li>
+                <li>الاستكشاف والتحري عن ترسبات الأملاح وتحديد احتياطياتها .</li>
+                <li>مسوحات جيوفيزيائية مختلفة لأغراض الاستكشاف وتحديد التكهفات وتحديد الأجسام المطمورة .</li>
+                <li>دراسة وتحديد احتياطي الفوسفات في منطقة النخيب .</li>
+                <li>التقييم الجيتكنيكي لموقعي عشوة وجندلي لأغراض الطمر الصحي .</li>
+                <li>التقييم الجيوتكنيكي لموقع ما بين واديي خزكة والبرخية غرب مدينة عانة لأغراض إنشاء بحيرة صناعية لإنتاج الكهرباء بالضخ .</li>
+                <li>التقييم الجيوتكنيكي لموقع شاري جوان في محافظة السليمانية لإنشاء فندق كراند ميلينيوم من ( ۳۲ ) طابق .</li>
+                <li>التقييم الجيوتكنيكي لمواقع رئاسية سابقة مثل مكحول وسرسنك .</li>
+                <li>إعداد خريطة جيولوجية هندسية للمنطقة ما بين بيجي وسنجار .</li>
+                <li>التحري الجيوتكنيكي للرخام وبدائله في عموم البلاد .</li>
+                <li>تحديث الخرائط الهيدروجيولوجية مقياس 1 : 250000</li>
+                <li>إعداد خريطة عمق المياه الجوفية في العراق مقياس 1 : 6000000</li>
+                <li>إجراء عمليات التحشية بواسطة المايكروبايلس تحت الأسس لمعالجة الهبوط الأرضي والتكهفات التحت سطحية .</li>
+            </ul>
+       
+<div id="our-products" class="section-content">
+    <h2>Our Products</h2>
+    <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="Product 1" />
+    <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="Product 2" />
+    <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="Product 3" />
+    <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="Product 4" />
+    <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="Product 5" />
+    <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="Product 6" />
+    <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="Product 7" />
+    <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="Product 8" />
+    <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="Product 9" />
+    <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-21-37-26-7300fe03.jpg" alt="Product 10" />
+    <img src="https://i.postimg.cc/jjqCctgK/Whats-App-Image-2025-08-08-at-21-37-27-5c58f693.jpg" alt="Product 11" />
+    <img src="https://i.postimg.cc/XYkp9pgQ/Whats-App-Image-2025-08-08-at-21-37-27-70628fc1.jpg" alt="Product 12" />
+    <img src="https://i.postimg.cc/4xgYKzpY/Whats-App-Image-2025-08-08-at-21-37-27-b13a1be0.jpg" alt="Product 13" />
+    <img src="https://i.postimg.cc/3xvkNty5/Whats-App-Image-2025-08-08-at-21-37-28-d6fe909d.jpg" alt="product 14" />
     </div>
-
-    <div id="achievements" class="section-content">
-        <h2>Our Achievements</h2>
-        <ul>
-            <li>Preparing an environmental impact assessment study for the borders of Basra Governorate.</li>
-            <li>Preparing an environmental impact assessment study for the establishment of Sinjar University.</li>
-            <li>Studying and calculating the amount of pollution in the Tigris River in the Al-Qaim area.</li>
-            <li>Studying and evaluating environmental and radiological pollution in the Abu Sukheir area, Najaf Al-Ashraf.</li>
-            <li>Drilling water wells for various purposes such as agricultural, irrigation, and reducing groundwater levels, in addition to drilling monitoring wells.</li>
-            <li>Studying surface and groundwater resources and the study of hydraulic factors, in addition to studying mineral water sources and the possibility of establishing health resorts.</li>
-            <li>Exploration and investigation of salt deposits and determining their reserves.</li>
-            <li>Various geophysical surveys for the purposes of exploration, identifying cavities, and determining buried objects.</li>
-            <li>Studying and determining phosphate reserves in the Al-Ukhaidhir area.</li>
-            <li>Geotechnical assessment of the Oshwa and Jandali sites for sanitary landfill purposes.</li>
-            <li>Geotechnical assessment of the site between the Khazka and Barkhiya valleys, west of the city of Ana, for the purpose of constructing an artificial lake for pumped-storage hydroelectricity generation.</li>
-            <li>Geotechnical assessment of the Shari Juan site in the Sulaymaniyah Governorate for the construction of the Grand Millennium Hotel (32 floors).</li>
-            <li>Geotechnical assessment of previous presidential sites such as Makhoul and Sarsang.</li>
-            <li>Preparing an engineering geological map of the area between Baiji and Sinjar.</li>
-            <li>Geotechnical investigation of marble and its alternatives throughout the country.</li>
-            <li>Updating hydrogeological maps at a scale of 1:250,000.</li>
-            <li>Preparing a map of groundwater depth in Iraq at a scale of 1:6,000,000.</li>
-            <li>Implementing grouting operations using micropiles under foundations to treat land subsidence and subsurface cavities.</li>
-        </ul>
-    </div>
-
-    <div id="our-products" class="section-content">
-        <h2>Our Products</h2>
-        <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="Product 1" />
-        <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="Product 2" />
-        <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="Product 3" />
-        <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="Product 4" />
-        <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="Product 5" />
-        <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="Product 6" />
-        <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="Product 7" />
-        <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="Product 8" />
-        <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="Product 9" />
-        <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-21-37-26-7300fe03.jpg" alt="Product 10" />
-        <img src="https://i.postimg.cc/jjqCctgK/Whats-App-Image-2025-08-08-at-21-37-27-5c58f693.jpg" alt="Product 11" />
-        <img src="https://i.postimg.cc/XYkp9pgQ/Whats-App-Image-2025-08-08-at-21-37-27-70628fc1.jpg" alt="Product 12" />
-        <img src="https://i.postimg.cc/4xgYKzpY/Whats-App-Image-2025-08-08-at-21-37-27-b13a1be0.jpg" alt="Product 13" />
-        <img src="https://i.postimg.cc/3xvkNty5/Whats-App-Image-2025-08-08-at-21-37-28-d6fe909d.jpg" alt="Product 14" />
-    </div>
-</div>
-
-<div class="about-container">
-    <div class="section-buttons">
-        <button class="section-button" onclick="toggleSection('arabic-about', this)">من نحن</button>
-        <button class="section-button" onclick="toggleSection('arabic-services', this)">خدماتنا</button>
-        <button class="section-button" onclick="toggleSection('arabic-contact', this)">اتصل بنا</button>
-        <button class="section-button" onclick="toggleSection('arabic-achievements', this)">إنجازاتنا</button>
-        <button class="section-button" onclick="toggleSection('arabic-products', this)">منتجاتنا</button>
-    </div>
-
-    <div id="arabic-about" class="arabic-content">
-        <h2>من نحن</h2>
-        <p>
-            تأسس مكتب المازن للدراسات والاستشارات الجيولوجية سنة 1998، ويضم المكتب نخبة من الاستشاريين في مجالات واسعة في علم الجيولوجيا،
-            ممن عملوا سنوات طوال لدى الدوائر والمؤسسات ذات العلاقة. إن الرؤية المستقبلية للمكتب تتجاوز الدور التقليدي للمكاتب الاستشارية،
-            وصولًا إلى وضع خطط مستقبلية طموحة لوضع العراق في ما يستحقه من مقام.
-        </p>
-    </div>
-
-    <div id="arabic-services" class="arabic-content">
-        <h2>خدماتنا</h2>
-        <img src="https://i.postimg.cc/7ZvPgwzX/Screenshot-2025-04-02-200358.png" alt="Service" />
-    </div>
-
-    <div id="arabic-contact" class="arabic-content">
-        <h2>اتصل بنا</h2>
-        <ul>
-            <li>☎️ +964 773 670 0004 / +964 787 198 5019</li>
-            <li>📧 mazingroup64@gmail.com</li>
-            <li>📍 الكرادة، بغداد</li>
-        </ul>
-    </div>
-
-    <div id="arabic-achievements" class="arabic-content">
-        <h2>إنجازاتنا / Our Achievements</h2>
-        <ul dir="rtl">
-            <li>إعداد دراسة الأثر البيئي لحدود محافظة البصرة .</li>
-            <li>إعداد دراسة الأثر البيئي لإنشاء جامعة سنجار .</li>
-            <li>دراسة وحساب مقدار التلوث في نهر دجلة في منطقة القائم .</li>
-            <li>دراسة وتقييم التلوث البيئي والأشعاعي في منطقة ابو صخير النجف الأشرف .</li>
-            <li>حفر الآبار المائية لأغراض مختلفة مثل مشاريع زراعية , إروائية , تخفيض مناسيب المياه الجوفية إضافة الى حفر ابار مراقبة .</li>
-            <li>دراسة الموارد المائية السطحية والجوفية ودراسة العوامل الهيدروليكية إضافة الى دراسة مصادر المياه المعدنية وأمكانية إقامة منتجعات صحية .</li>
-            <li>الاستكشاف والتحري عن ترسبات الأملاح وتحديد احتياطياتها .</li>
-            <li>مسوحات جيوفيزيائية مختلفة لأغراض الاستكشاف وتحديد التكهفات وتحديد الأجسام المطمورة .</li>
-            <li>دراسة وتحديد احتياطي الفوسفات في منطقة النخيب .</li>
-            <li>التقييم الجيتكنيكي لموقعي عشوة وجندلي لأغراض الطمر الصحي .</li>
-            <li>التقييم الجيوتكنيكي لموقع ما بين واديي خزكة والبرخية غرب مدينة عانة لأغراض إنشاء بحيرة صناعية لإنتاج الكهرباء بالضخ .</li>
-            <li>التقييم الجيوتكنيكي لموقع شاري جوان في محافظة السليمانية لإنشاء فندق كراند ميلينيوم من ( ۳۲ ) طابق .</li>
-            <li>التقييم الجيوتكنيكي لمواقع رئاسية سابقة مثل مكحول وسرسنك .</li>
-            <li>إعداد خريطة جيولوجية هندسية للمنطقة ما بين بيجي وسنجار .</li>
-            <li>التحري الجيوتكنيكي للرخام وبدائله في عموم البلاد .</li>
-            <li>تحديث الخرائط الهيدروجيولوجية مقياس 1 : 250000</li>
-            <li>إعداد خريطة عمق المياه الجوفية في العراق مقياس 1 : 6000000</li>
-            <li>إجراء عمليات التحشية بواسطة المايكروبايلس تحت الأسس لمعالجة الهبوط الأرضي والتكهفات التحت سطحية .</li>
-        </ul>
-    </div>
-
     <div id="arabic-products" class="arabic-content">
-        <h2>منتجاتنا</h2>
-        <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="Product 1" />
-        <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="Product 2" />
-        <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="Product 3" />
-        <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="Product 4" />
-        <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="Product 5" />
-        <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="Product 6" />
-        <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="Product 7" />
-        <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="Product 8" />
-        <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="Product 9" />
-        <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-
+    <h2>منتجاتنا</h2>
+    <img src="https://i.postimg.cc/XvX4XJ1Z/Whats-App-Image-2025-08-08-at-21-34-34-15e6b711.jpg" alt="Product 1" />
+    <img src="https://i.postimg.cc/SN7yvHzK/Whats-App-Image-2025-08-08-at-21-34-35-2b29d6c4.jpg" alt="Product 2" />
+    <img src="https://i.postimg.cc/pXtWkPr7/Whats-App-Image-2025-08-08-at-21-34-35-aff5adc9.jpg" alt="Product 3" />
+    <img src="https://i.postimg.cc/wvyq4vhK/Whats-App-Image-2025-08-08-at-21-34-36-07dc0dc9.jpg" alt="Product 4" />
+    <img src="https://i.postimg.cc/cJJ4YTCL/Whats-App-Image-2025-08-08-at-21-34-36-19fd29eb.jpg" alt="Product 5" />
+    <img src="https://i.postimg.cc/mgBrZTGM/Whats-App-Image-2025-08-08-at-21-34-36-68ed528e.jpg" alt="Product 6" />
+    <img src="https://i.postimg.cc/X7wJ0pt4/Whats-App-Image-2025-08-08-at-21-34-37-3dd28862.jpg" alt="Product 7" />
+    <img src="https://i.postimg.cc/RCJhXPR3/Whats-App-Image-2025-08-08-at-21-34-37-76483e77.jpg" alt="Product 8" />
+    <img src="https://i.postimg.cc/C58K511C/Whats-App-Image-2025-08-08-at-21-34-37-a23528ca.jpg" alt="Product 9" />
+    <img src="https://i.postimg.cc/4dmyCwRS/Whats-App-Image-2025-08-08-at-21-37-26-7300fe03.jpg" alt="Product 10" />
+    <img src="https://i.postimg.cc/jjqCctgK/Whats-App-Image-2025-08-08-at-21-37-27-5c58f693.jpg" alt="Product 11" />
+    <img src="https://i.postimg.cc/XYkp9pgQ/Whats-App-Image-2025-08-08-at-21-37-27-70628fc1.jpg" alt="Product 12" />
+    <img src="https://i.postimg.cc/4xgYKzpY/Whats-App-Image-2025-08-08-at-21-37-27-b13a1be0.jpg" alt="Product 13" />
+    <img src="https://i.postimg.cc/3xvkNty5/Whats-App-Image-2025-08-08-at-21-37-28-d6fe909d.jpg" alt="product 14" />
+ </div>
+
+
+
+<div class="doctor-section">
+        <h2>Our Experts</h2>
+        <div class="doctor-container">
+            <div class="doctor">
+                <img src="https://i.postimg.cc/vBybwsHL/Screenshot-2025-03-31-143150.png" alt="Dr. Mazin Al-Aboudi" >
+                <p>Dr. Mazin Al-Aboudi<br>PhD in Geophysical Exploration<br>Director of the Bureau</p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/SRTh9YLD/Screenshot-2025-03-31-143204.png" alt="Dr. Rafiq Zaner">
+                <p>Dr. Rafaa Zair Jassim<br>PhD in Geochemistry and Environmental Sciences<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/TY1G6QGS/Screenshot-2025-03-31-143217.png" alt="Dr. Jasim Mohammed Thabet">
+                <p>Dr. Jassim Mohammed Thabet<br>PhD in Electrical Surveying<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/pVGbq88B/Screenshot-2025-03-31-143234.png" alt="Dr. Nasir Al-Musawi">
+                <p>Dr. Naseer Albasrawi<br>PhD in Water Resources and Environmental Studies<br></p>
+            </div>
+            <div class="doctor">
+                <img src="https://i.postimg.cc/YSwJhxKt/Screenshot-2025-03-31-143430.png" alt="Araseen Kalikisian">
+                <p>Arsen Capigian<br>Geotechnical Site Evaluation Expert<br></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId, button) {
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.about-container:first-child .section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        function toggleArabicSection(sectionId, button) {
+            const sections = document.querySelectorAll('.arabic-content');
+            sections.forEach(section => section.classList.remove('active'));
+            const buttons = document.querySelectorAll('.about-container:nth-child(2) .section-button');
+            buttons.forEach(btn => btn.classList.remove('toggled'));
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                button.classList.add('toggled');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const englishButtons = document.querySelectorAll('.about-container:first-child .section-button');
+            if (englishButtons.length > 0) {
+                toggleSection('about', englishButtons[0]); // Show English About Us by default and toggle the button
+            }
+
+            const arabicButtons = document.querySelectorAll('.about-container:nth-child(2) .section-button');
+            if (arabicButtons.length > 0) {
+                toggleArabicSection('arabic-about', arabicButtons[0]); // Show Arabic من نحن by default and toggle the button
+            }
+        });
+    </script>
+    <script>
+function toggleSection(sectionId, button) {
+  // Hide all section-content and arabic-content
+  document.querySelectorAll('.section-content, .arabic-content').forEach(s => {
+    s.classList.remove('active');
+  });
+
+  // Remove toggled style from all buttons
+  document.querySelectorAll('.section-button').forEach(btn => {
+    btn.classList.remove('toggled');
+  });
+
+  // Show the clicked section
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.classList.add('active');
+  }
+
+  // Highlight the clicked button
+  button.classList.add('toggled');
+}
+</script>
+
+    <button class="section-button" onclick="toggleSection('our-products', this)">Our Products</button>
+<button class="section-button" onclick="toggleSection('arabic-products', this)">منتجاتنا</button>
+
+</body> 
+
+<script>
+function toggleSection(sectionId, button) {
+  // Hide all section-content and arabic-content
+  document.querySelectorAll('.section-content, .arabic-content').forEach(s => {
+    s.classList.remove('active');
+  });
+
+  // Remove toggled style from all buttons
+  document.querySelectorAll('.section-button').forEach(btn => {
+    btn.classList.remove('toggled');
+  });
+
+  // Show the clicked section
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.classList.add('active');
+  }
+
+  // Highlight the clicked button
+  button.classList.add('toggled');
+}
+<!-- your full HTML content here -->
+
+<script>
+function toggleSection(sectionId, button) {
+  // Hide all section-content and arabic-content
+  document.querySelectorAll('.section-content, .arabic-content').forEach(s => {
+    s.classList.remove('active');
+  });
+
+  // Remove toggled style from all buttons
+  document.querySelectorAll('.section-button').forEach(btn => {
+    btn.classList.remove('toggled');
+  });
+
+  // Show the clicked section
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.classList.add('active');
+  }
+
+  // Highlight the clicked button
+  button.classList.add('toggled');
+}
+</script>
+</body>
+</html>
+
