@@ -150,19 +150,17 @@ img {
   transition: transform 0.3s ease;
 }
 
-img.enlarged {
-  transform: scale(2);
-  z-index: 10;
-  position: relative;
-}
+/* Images default size */
 .click-expand {
-  width: 80px; /* small by default */
+  width: 120px; /* small default size */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.click-expand.expanded {
-  transform: scale(1.5); /* enlarge when clicked */
+/* Enlarged on click */
+.click-expand.enlarged {
+  transform: scale(1.8);
   z-index: 10;
+  position: relative;
 }
