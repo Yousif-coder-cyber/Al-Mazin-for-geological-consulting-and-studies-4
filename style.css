@@ -169,5 +169,10 @@ img {
   z-index: 10;
   position: relative;
 }
+.ltr-text {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  display: inline-block;
+}
 
 
