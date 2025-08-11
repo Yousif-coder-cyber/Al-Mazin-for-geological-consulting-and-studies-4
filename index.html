@@ -1,5 +1,5 @@
 
-<script src="script.js"></script>
+<script src="somefile.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -343,6 +343,7 @@ img {
 }
 
 
+
     </style>
 </head>
 <body>
@@ -635,8 +636,7 @@ function toggleSection(sectionId, button) {
 
   // Highlight the clicked button
   button.classList.add('toggled');
-}
-    function toggleSection(sectionId, button) {
+}function toggleSection(sectionId, button) {
   document.querySelectorAll('.section-content, .arabic-content').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.section-button').forEach(btn => btn.classList.remove('toggled'));
   const section = document.getElementById(sectionId);
@@ -650,6 +650,8 @@ document.querySelectorAll('.products-gallery img').forEach(img => {
     img.classList.toggle('enlarged');
   });
 });
+
 </script>
 </body>
 </html>
+
