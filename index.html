@@ -170,6 +170,178 @@ body {
             margin-top: 0;
             color: #555;
         }
+/* Reset & base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 200%;
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.postimg.cc/XY3JRnvq/Winkel-triple-projection-SW-1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  text-align: center;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Containers */
+.about-container {
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 10px 15px;
+  background: rgba(255,255,255,0.85);
+}
+
+/* Buttons Container */
+.section-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.section-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.section-button:hover,
+.section-button.toggled {
+  background-color: #777;
+  color: black;
+  font-weight: bold;
+}
+
+/* Sections content */
+.section-content,
+.arabic-content {
+  display: none;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 850px;
+  margin: 0 auto 20px auto;
+}
+
+.section-content.active,
+.arabic-content.active {
+  display: block;
+}
+
+/* Arabic text styles */
+.arabic-content {
+  direction: rtl;
+  font-family: 'Tajawal', 'Amiri', 'Arial', 'Tahoma', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  unicode-bidi: embed;
+  color: #282828;
+}
+
+/* Headings */
+.section-content h1,
+.section-content h2,
+.arabic-content h1,
+.arabic-content h2,
+.doctor-section h2 {
+  color: firebrick;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Lists */
+.section-content ul,
+.arabic-content ul {
+  list-style-type: square;
+  text-align: left;
+  margin-left: 40px;
+  color: #282828;
+  font-weight: bold;
+}
+
+/* Doctor section */
+.doctor-section {
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.doctor-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.doctor {
+  width: 180px;
+  text-align: center;
+}
+
+.doctor img {
+  width: 100px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.doctor p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+  color: #555;
+}
+img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.products-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.products-gallery img {
+  width: 150px; /* smaller size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.products-gallery img.enlarged {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
 
     </style>
 </head>
