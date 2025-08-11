@@ -150,17 +150,24 @@ img {
   transition: transform 0.3s ease;
 }
 
-/* Images default size */
-.click-expand {
-  width: 120px; /* small default size */
+.products-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.products-gallery img {
+  width: 150px; /* smaller size */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* Enlarged on click */
-.click-expand.enlarged {
-  transform: scale(1.8);
+.products-gallery img.enlarged {
+  transform: scale(1.5);
   z-index: 10;
   position: relative;
 }
+
+
